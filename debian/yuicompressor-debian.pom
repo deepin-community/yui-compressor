@@ -1,0 +1,13 @@
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.yahoo.platform.yui</groupId>
+	<artifactId>yuicompressor</artifactId>
+	<version>debian</version>
+	<packaging>jar</packaging>
+	<properties>
+		<debian.originalVersion>2.4.7-3~</debian.originalVersion>
+		<debian.hasPackageVersion/>
+		<debian.package>yui-compressor</debian.package>
+		<debian.mavenRules>com.yahoo.platform.yui yuicompressor jar s/.*/debian/ * *</debian.mavenRules>
+	</properties>
+</project>

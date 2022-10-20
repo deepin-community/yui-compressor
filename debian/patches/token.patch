@@ -1,0 +1,17 @@
+YUI patch for the Rhino library's Token.java
+===================================================================
+--- a/src/org/mozilla/javascript/Token.java.orig	2009-12-25 00:39:07.000000000 -0500
++++ b/src/org/mozilla/javascript/Token.java	2009-12-25 00:39:39.000000000 -0500
+@@ -258,7 +258,11 @@
+         LETEXPR        = 157,
+         WITHEXPR       = 158,
+         DEBUGGER       = 159,
+-        LAST_TOKEN     = 159;
++
++        CONDCOMMENT    = 160,
++        KEEPCOMMENT    = 161,
++
++        LAST_TOKEN     = 162;
+ 
+     public static String name(int token)
+     {

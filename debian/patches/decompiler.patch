@@ -1,0 +1,23 @@
+YUI patch for the Rhino library's Decompiler.java
+===================================================================
+--- a/src/org/mozilla/javascript/Decompiler.java
++++ b/src/org/mozilla/javascript/Decompiler.java
+@@ -133,6 +133,18 @@ public class Decompiler
+         appendString('/' + regexp + '/' + flags);
+     }
+ 
++    void addJScriptConditionalComment(String str)
++    {
++        addToken(Token.CONDCOMMENT);
++        appendString(str);
++    }
++
++    void addPreservedComment(String str)
++    {
++        addToken(Token.KEEPCOMMENT);
++        appendString(str);
++    }
++
+     void addNumber(double n)
+     {
+         addToken(Token.NUMBER);

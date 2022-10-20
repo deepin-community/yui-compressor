@@ -1,0 +1,3 @@
+build/yui-compressor.jar /usr/share/yui-compressor
+debian/bin/yui-compressor /usr/bin
+debian/yuicompressor-debian.pom /usr/share/maven-repo/com/yahoo/platform/yui/yuicompressor/debian/

@@ -1,0 +1,20 @@
+#!/usr/bin/make -f
+
+LIBRARY=yui-compressor
+VERSION=2.4.8
+RHINO_VERSION=1.7R2-4
+
+%:
+	dh $@
+
+override_dh_auto_test:
+	# Launch tests
+	(cd tests; bash ./suite.sh)
+
+override_dh_auto_install:
+	# Rename JAR file
+	cp build/yuicompressor-${VERSION}.jar build/yui-compressor.jar
+	dh_auto_install
+
+get-orig-source:
+	debian/fetch-upstream ${VERSION} ${DEB_UPSTREAM_VERSION} ${RHINO_VERSION}

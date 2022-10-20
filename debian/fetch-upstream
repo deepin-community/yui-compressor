@@ -1,0 +1,38 @@
+#!/bin/sh
+
+set -e
+
+if test "$#" != "3" ; then
+    echo "usage: $0 <upstream version number> <expected tarball version> <rhino package version>"
+    exit 1
+fi
+version="$1"
+orig_tarball_version="$2"
+rhino_version="$3"
+curdir="$PWD"
+
+# download
+cd $(mktemp -d)
+echo Working in: $(pwd)
+wget -N https://github.com/yui/yuicompressor/archive/v$version.zip
+unzip -xq v$version.zip
+rm v$version.zip
+
+# cleanup
+rm -rf yuicompressor-$version/build
+rm -rf yuicompressor-$version/lib
+rm -rf yuicompressor-$version/src/org/mozilla/javascript/*
+
+# download rhino source
+debsnap --verbose rhino $rhino_version
+(cd source-rhino/; tar xf rhino*.tar.gz)
+rm source-rhino/*.gz source-rhino/*.dsc
+cp -r source-rhino/*/src/org/mozilla/* yuicompressor-$version/src/org/mozilla/
+
+# repack
+mv yuicompressor-$version yui-compressor-$version
+tar cJf yui-compressor_$orig_tarball_version.orig.tar.xz yui-compressor-$version
+rm -rf yui-compressor-$version
+rm -rf source-rhino
+mv yui-compressor_$orig_tarball_version.orig.tar.xz $curdir
+echo "Done: successfully created yui-compressor_$version.orig.tar.xz."

@@ -1,0 +1,114 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: YUI Compressor
+Upstream-Contact: Julien Lecomte <jlecomte@yahoo-inc.com>
+Source: http://yuilibrary.com/projects/yuicompressor/
+
+Files: *
+Copyright: Copyright 2007-2011, Yahoo! Inc. All rights reserved.
+License: BSD-3-clause
+ Redistribution and use of this software in source and binary forms,
+ with or without modification, are permitted provided that the following
+ conditions are met:
+ .
+ * Redistributions of source code must retain the above
+   copyright notice, this list of conditions and the
+   following disclaimer.
+ .
+ * Redistributions in binary form must reproduce the above
+   copyright notice, this list of conditions and the
+   following disclaimer in the documentation and/or other
+   materials provided with the distribution.
+ .
+ * Neither the name of Yahoo! Inc. nor the names of its
+   contributors may be used to endorse or promote products
+   derived from this software without specific prior
+   written permission of Yahoo! Inc.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE
+ FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Files: src/com/yahoo/platform/yui/compressor/CssCompressor.java
+Copyright: Copyright 2007-2009, Yahoo! Inc. All rights reserved.
+License: BSD-3-clause
+ This code is a port of Isaac Schlueter's cssmin utility.
+ .
+ Redistribution and use of this software in source and binary forms,
+ with or without modification, are permitted provided that the following
+ conditions are met:
+ .
+ * Redistributions of source code must retain the above
+   copyright notice, this list of conditions and the
+   following disclaimer.
+ .
+ * Redistributions in binary form must reproduce the above
+   copyright notice, this list of conditions and the
+   following disclaimer in the documentation and/or other
+   materials provided with the distribution.
+ .
+ * Neither the name of Yahoo! Inc. nor the names of its
+   contributors may be used to endorse or promote products
+   derived from this software without specific prior
+   written permission of Yahoo! Inc.
+ .
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+ DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE
+ FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+ DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+Files: src/org/*
+Copyright: Copyright 1997-1999, Netscape Communications Corporation.
+License: MPL-1.1 or GPL-2+
+ The contents of this file are subject to the Mozilla Public License Version
+ 1.1 (the "License"); you may not use this file except in compliance with
+ the License. You may obtain a copy of the License at
+ http://www.mozilla.org/MPL/
+ .
+ Software distributed under the License is distributed on an "AS IS" basis,
+ WITHOUT WARRANTY OF ANY KIND, either express or implied. See the License
+ for the specific language governing rights and limitations under the
+ License.
+ .
+ The Original Code is Rhino code, released
+ May 6, 1999.
+ .
+ The Initial Developer of the Original Code is
+ Netscape Communications Corporation.
+ Portions created by the Initial Developer are Copyright (C) 1997-1999
+ the Initial Developer. All Rights Reserved.
+ .
+ Contributor(s):
+   Mike Ang
+   Igor Bukanov
+   Bob Jervis
+   Mike McCabe
+ .
+ Alternatively, the contents of this file may be used under the terms of
+ the GNU General Public License Version 2 or later (the "GPL"), in which
+ case the provisions of the GPL are applicable instead of those above. If
+ you wish to allow use of your version of this file only under the terms of
+ the GPL and not to allow others to use your version of this file under the
+ MPL, indicate your decision by deleting the provisions above and replacing
+ them with the notice and other provisions required by the GPL. If you do
+ not delete the provisions above, a recipient may use your version of this
+ file under either the MPL or the GPL.
+
+Files: debian/*
+Copyright: 2009, Dominik Smatana <dominik.smatana@gmail.com>
+           2009-2011, Damien Raude-Morvan <drazzib@debian.org>
+License: GPL-3
+ On Debian systems the full text of the GNU General Public License version 3
+ can be found in the '/usr/share/common-licenses/GPL-3' file.

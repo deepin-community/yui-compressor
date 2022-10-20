@@ -1,0 +1,35 @@
+Description: Use /usr/share/java/js.jar
+Author: Damien Raude-Morvan <drazzib@debian.org>
+Last-Update: 2011-06-12
+Forwarded: not-needed
+Index: yui-compressor/tests/suite.sh
+===================================================================
+--- yui-compressor.orig/tests/suite.sh
++++ yui-compressor/tests/suite.sh
+@@ -18,7 +18,7 @@ runtest () {
+ 	
+ 	if [ "$2" == "cssminjs" ]; then 
+ 	    actual="$(
+-		    java -jar ../lib/rhino-1.7R2.jar suite.rhino $testfile
++		    java -jar /usr/share/java/js.jar suite.rhino $testfile
+ 	    )"
+          
+     else
+@@ -28,7 +28,7 @@ runtest () {
+     fi
+ 	
+ 	if [ "$expected" == "$actual" ]; then
+-		echo "Passed: $testfile" > /dev/stderr
++		echo "Passed: $testfile" >&2
+ 	else
+ 		(
+ 			echo "Test failed: $testfile"
+@@ -38,7 +38,7 @@ runtest () {
+ 			echo ""
+ 			echo "Actual:"
+ 			echo "$actual"
+-		) > /dev/stderr
++		) >&2
+ 		return 1
+ 	fi
+ }

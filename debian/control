@@ -1,0 +1,30 @@
+Source: yui-compressor
+Section: java
+Priority: optional
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Uploaders: Dominik Smatana <dominik.smatana@gmail.com>,
+           Michael Gilbert <michael.s.gilbert@gmail.com>,
+           tony mancill <tmancill@debian.org>
+Build-Depends: ant, debhelper (>= 11), default-jdk
+Build-Depends-Indep: libjargs-java, librhino-java
+Homepage: http://yuilibrary.com/projects/yuicompressor/
+Vcs-Git: https://anonscm.debian.org/git/pkg-java/yui-compressor.git
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-java/yui-compressor.git
+Standards-Version: 4.1.3
+
+Package: yui-compressor
+Architecture: all
+Depends: default-jre-headless | java5-runtime-headless,
+         java-wrappers,
+         libjargs-java,
+         ${misc:Depends}
+Multi-Arch: foreign
+Description: JavaScript/CSS minifier
+ The YUI Compressor is a JavaScript compressor which, in addition to removing
+ comments and white-spaces, obfuscates local variables using the smallest
+ possible variable name. This obfuscation is safe, even when using constructs
+ such as 'eval' or 'with' (although the compression is not optimal is those
+ cases) Compared to jsmin, the average savings is around 20%.
+ .
+ The YUI Compressor is also able to safely compress CSS files. The decision
+ on which compressor is being used is made on the file extension (js or css).

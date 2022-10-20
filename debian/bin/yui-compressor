@@ -1,0 +1,12 @@
+#!/bin/sh
+
+YUI_JAR=/usr/share/yui-compressor/yui-compressor.jar
+
+# Include the wrappers utility script
+. /usr/lib/java-wrappers/java-wrappers.sh
+
+# We need a java5 runtime
+find_java_runtime java5
+
+# Run YUI Compressor
+run_java -jar $YUI_JAR $extra_args "$@"
